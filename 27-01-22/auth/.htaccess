@@ -1,0 +1,4 @@
+AuthUserFile C:/xampp/htdocs/pwad-50/27-01-222/auth/pass/.htpasswd
+AuthType Basic
+AuthName "My Files"
+Require valid-user
