@@ -7,7 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+<form action="" method="post">
+    <p>
+        <input type="text" name="email" placeholder="email here">
+        <input type="password" name="pass" placeholder="password here">
+    </p><br>
+    <input type="submit" value="Submit">
+</form>
 <?php
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -27,8 +33,6 @@
             if(strlen($pass)<5 || strlen($pass)>10){
                 $errors[]="Password lenth must be 5 to 10..!";
             }
-
-
             if(empty($errors)){
                 echo "All data are valid";
             }else{
@@ -36,20 +40,12 @@
                     echo "<h2>$err</h2>";
                 }
             }
-
         }
-
     }
 
 
 ?>
 
-<form action="" method="post">
-    <p>
-        <input type="text" name="email" placeholder="email here">
-        <input type="password" name="pass" placeholder="password here">
-    </p><br>
-    <input type="submit" value="Submit">
-</form>
+
 </body>
 </html>
